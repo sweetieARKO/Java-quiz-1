@@ -1,4 +1,4 @@
-package org.example;
+package Week1;
 
 public class Quiz4question5 {
 
