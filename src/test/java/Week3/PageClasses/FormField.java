@@ -13,7 +13,7 @@ public class FormField {
     WebDriver driver;
 
     @BeforeTest()
-    public void driverInitializer(){
+    public void driverInitializer() {
 
         WebDriverManager.edgedriver().setup();
         driver = new EdgeDriver();
@@ -22,7 +22,7 @@ public class FormField {
     }
 
     @Test()
-    public void testFormFields(){
+    public void testFormFields() {
         formFields test = new formFields(driver);
         test.clickOnButton();
         // Add further test steps here
