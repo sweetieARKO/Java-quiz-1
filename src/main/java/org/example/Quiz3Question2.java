@@ -3,13 +3,13 @@ package org.example;
 public class Quiz3Question2 {
 
     public static void main(String[] args) {
-        int age =   11;
+        int age =   12;
         switch (age) {
 
             case 12:
                 System.out.println("You are a child.");
                 break;
-            case 19:
+         case 19:
                 System.out.println("You are a teenager.");
                 break;
             case 59:
