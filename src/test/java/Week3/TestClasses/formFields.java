@@ -11,7 +11,7 @@ public class formFields{
 
     }
     By button = By.xpath("//a[normalize-space()='Form Fields']");
-    public void ClickOnButton(){
+    public void clickOnButton(){
         WebElement Button = driver.findElement(button);
         Button.click();
     }

@@ -2,7 +2,6 @@ package Week3.PageClasses;
 
 import Week3.TestClasses.formFields;
 import io.github.bonigarcia.wdm.WebDriverManager;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -11,7 +10,7 @@ import org.testng.annotations.Test;
 
 public class FormField {
 
-  WebDriver driver;
+    WebDriver driver;
 
     @BeforeTest()
     public void driverInitializer(){
@@ -21,9 +20,11 @@ public class FormField {
         driver.manage().window().maximize();
         driver.get("https://practice-automation.com/");
     }
-@Test()
-    public void Test(){
-    formFields formField = new formFields(driver);
-    formField.ClickOnButton();
-}
+
+    @Test()
+    public void testFormFields(){
+        formFields test = new formFields(driver);
+        test.clickOnButton();
+        // Add further test steps here
+    }
 }
