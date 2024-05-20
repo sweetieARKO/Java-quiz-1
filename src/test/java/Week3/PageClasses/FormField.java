@@ -23,8 +23,8 @@ public class FormField {
 
     @Test()
     public void testFormFields() {
-        formFields test = new formFields(driver);
-        test.clickOnButton();
-        // Add further test steps here
+    formFields fields = new formFields(driver);
+    fields.clickOnButton();
+
     }
 }
