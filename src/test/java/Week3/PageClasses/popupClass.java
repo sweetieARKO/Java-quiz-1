@@ -5,6 +5,7 @@ import Week3.TestClasses.Popups;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -25,6 +26,11 @@ public class popupClass {
         popups.alertPopup();
         popups.confirmPopUp();
         popups.promptPopUp("Good");
+}
+@AfterTest()
+    public void afterTest() throws InterruptedException {
+        driver.quit();
+
 }
 
 

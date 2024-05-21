@@ -5,6 +5,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.ui.Wait;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import Week3.TestClasses.Calendars;
@@ -29,5 +30,9 @@ public class CalendarsTest {
         calendars.setDatepicker("June", "2025", "08");
         calendars.setDay();
         calendars.clickButton();
+    }
+    @AfterTest
+    public void AfterTest(){
+        driver.quit();
     }
 }

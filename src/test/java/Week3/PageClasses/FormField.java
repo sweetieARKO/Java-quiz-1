@@ -5,6 +5,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -26,5 +27,9 @@ public class FormField {
     formFields fields = new formFields(driver);
     fields.clickOnButton();
 
+    }
+    @AfterTest()
+    public void close(){
+        driver.quit();
     }
 }
