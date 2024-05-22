@@ -25,6 +25,18 @@ public class Tablesclass {
         tables.testTables();  // Call the method to test tables
         tables.TableItem();
     }
+    @Test
+    public void SearchItem(){
+        Tables search = new Tables(driver);
+        search.setSearch("United Kingdom");
+    }
+@Test
+    public void sortTable(){
+        Tables in = new Tables(driver);
+        in.getPopulation("United States");
+        in.getPopulation("Ghana");
 
+
+}
 
 }
