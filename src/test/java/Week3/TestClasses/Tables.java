@@ -21,7 +21,7 @@ public class Tables {
     private final By nextPageButton = By.xpath("//a[@id='tablepress-1_next']");
     private final By disableNext = By.xpath("//a[@class='paginate_button next disabled']");
     private final By search = By.id("search-input-id"); // Replace with actual search input field locator
-
+    private  final By following =By.xpath("//td[normalize-space()='United States']/following-sibling::td");
     public Tables(WebDriver driver) {
         this.driver = driver;
     }
@@ -87,22 +87,9 @@ public class Tables {
         return population;
     }
 
-    public void setSearch(String country) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
-        try {
-            // Wait until the search input field is visible and interactable
-            WebElement searchInput = wait.until(ExpectedConditions.visibilityOfElementLocated(search));
-
-            // Clear any existing text
-            searchInput.clear();
-
-            // Enter the country name
-            searchInput.sendKeys(country);
-
-            System.out.println("Search input set to: " + country);
-        } catch (Exception e) {
-            System.out.println("Failed to set search input: " + e.getMessage());
-        }
+    public void FindSiblings() {
+    WebElement sibling = driver.findElement(following);
+    String following = sibling.getText();
+        System.out.println("United States has a population of "+ following + "people.");
     }
 }

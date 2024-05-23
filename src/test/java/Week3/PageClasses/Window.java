@@ -1,4 +1,5 @@
 package Week3.PageClasses;
 
-public class Model {
+public class Window {
+
 }

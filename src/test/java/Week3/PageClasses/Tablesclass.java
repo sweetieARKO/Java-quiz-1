@@ -28,7 +28,7 @@ public class Tablesclass {
     @Test
     public void SearchItem(){
         Tables search = new Tables(driver);
-        search.setSearch("United Kingdom");
+        search.FindSiblings();
     }
 @Test
     public void sortTable(){
