@@ -1,5 +1,4 @@
 package Week3.PageClasses;
 
-public class Window {
-
+public class FileDownload {
 }
