@@ -4,13 +4,13 @@ import Week3.TestClasses.FileDownload;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 public class fleDownload {
     private WebDriver driver;
-    FileDownload download;
-        @BeforeClass
+     @BeforeClass
     public void setup() {
         WebDriverManager.edgedriver().setup();
         driver = new EdgeDriver();
@@ -23,6 +23,23 @@ public class fleDownload {
      FileDownload download = new FileDownload(driver) ;
      download.testFileDownload();
      download.setButtonDownload();
-     download.setButtonlockDownload();
-}
+
+        }
+@Test
+    public void setDownload(){
+
+     FileDownload download1 = new FileDownload(driver) ;
+     download1.setButtonlockDownload();
+     download1.setPasswordInput();
+     download1.clickOnSubmit();
+     download1.setConfirmDownload();
+    }
+
+    @AfterTest()
+    public void afterTest() throws InterruptedException {
+        driver.quit();
+
+    }
+
+
 }
